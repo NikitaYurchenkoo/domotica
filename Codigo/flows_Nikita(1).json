@@ -1,0 +1,282 @@
+[
+    {
+        "id": "766936ad4de7ce70",
+        "type": "tab",
+        "label": "Fluxo Nikita",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "e2a5c19de12682e3",
+        "type": "ui_switch",
+        "z": "766936ad4de7ce70",
+        "name": "",
+        "label": "interruptorLED11",
+        "tooltip": "",
+        "group": "654b2b9f30da2b80",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 170,
+        "y": 380,
+        "wires": [
+            [
+                "673f2473adda0fdb"
+            ]
+        ]
+    },
+    {
+        "id": "673f2473adda0fdb",
+        "type": "mqtt out",
+        "z": "766936ad4de7ce70",
+        "name": "",
+        "topic": "casa/actuadores/led11",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "43c6d6fc24ad7b6d",
+        "x": 440,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "254249b2fd12b9d9",
+        "type": "inject",
+        "z": "766936ad4de7ce70",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "MensaxeBoton",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 170,
+        "y": 440,
+        "wires": [
+            [
+                "a4b0e313545ca8b7"
+            ]
+        ]
+    },
+    {
+        "id": "a6edaec5c6bda99d",
+        "type": "inject",
+        "z": "766936ad4de7ce70",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "MensaxeBoton",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 170,
+        "y": 500,
+        "wires": [
+            [
+                "80639385635e5895"
+            ]
+        ]
+    },
+    {
+        "id": "a4b0e313545ca8b7",
+        "type": "mqtt out",
+        "z": "766936ad4de7ce70",
+        "name": "",
+        "topic": "casa/actuadores/led11",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "43c6d6fc24ad7b6d",
+        "x": 440,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "80639385635e5895",
+        "type": "mqtt out",
+        "z": "766936ad4de7ce70",
+        "name": "",
+        "topic": "casa/actuadores/led11",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "43c6d6fc24ad7b6d",
+        "x": 440,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "41051618ef9716ab",
+        "type": "mqtt in",
+        "z": "766936ad4de7ce70",
+        "name": "",
+        "topic": "casa/actuadores/led11",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "43c6d6fc24ad7b6d",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 560,
+        "wires": [
+            [
+                "a647749d1ebd33bf"
+            ]
+        ]
+    },
+    {
+        "id": "6298491ff3f053e3",
+        "type": "mqtt in",
+        "z": "766936ad4de7ce70",
+        "name": "",
+        "topic": "casa/sensores/boton11",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "43c6d6fc24ad7b6d",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 620,
+        "wires": [
+            [
+                "b3f9cbda4afa1c4c"
+            ]
+        ]
+    },
+    {
+        "id": "a647749d1ebd33bf",
+        "type": "debug",
+        "z": "766936ad4de7ce70",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 400,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "b3f9cbda4afa1c4c",
+        "type": "debug",
+        "z": "766936ad4de7ce70",
+        "name": "debug 10",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 400,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "654b2b9f30da2b80",
+        "type": "ui_group",
+        "name": "Actuadores dixitais",
+        "tab": "5000729defeb6ba4",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "43c6d6fc24ad7b6d",
+        "type": "mqtt-broker",
+        "name": "mi_mosquitto_broker",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "5000729defeb6ba4",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
