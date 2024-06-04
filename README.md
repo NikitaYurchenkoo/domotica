@@ -8,3 +8,5 @@ Práctica 3 - realizamos un programa para encender y apagar un LED accionado por
 Práctica 4 - realizamos un programa utilizando un DHT11 que mide temperatura y humedad para hacer funcionar un ventilador accionado por un relé
 
 ![maqueta24](https://github.com/NikitaYurchenkoo/domotica/assets/171035972/5e9771d8-4258-41ad-a394-81ecb4a50a6c)
+![Nodos_Nikita](https://github.com/NikitaYurchenkoo/domotica/assets/171035972/1d414250-3440-413e-bc37-9c555a39a6b0)
+![P4_Nikita](https://github.com/NikitaYurchenkoo/domotica/assets/171035972/dc5b031e-db1a-4f08-8172-98d4c42280df)
